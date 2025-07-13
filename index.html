@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="usrdat.js"></script>
+    <title>Cadre Review</title>
+  </head>
+  <body>
+    <!-- Main Page Content -->
+    <div class="container">
+      <h1>User Event Choices</h1>
+      <p>A summary of registered users and their selected event preferences.</p>
+      <table id="userDataTable">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>
+              Event Choice
+              <select id="eventFilter" class="header-filter"></select>
+            </th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody id="userDataBody">
+          <!-- User data will be inserted here by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- The Modal -->
+    <div id="userModal" class="modal" style="display: none">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-header">
+          <h2 id="modalUserName"></h2>
+        </div>
+        <div class="modal-body">
+          <div class="user_card">
+            <p><strong>Age:</strong> <span id="modalAge"></span></p>
+            <p>
+              <strong>Yearly Income:</strong> <span id="modalIncome"></span>
+            </p>
+            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+            <p><strong>Education:</strong> <span id="modalEducation"></span></p>
+            <p><strong>Sex:</strong> <span id="modalSex"></span></p>
+          </div>
+
+          <!-- Document Viewer Section -->
+          <div class="document-viewer">
+            <div class="doc-buttons">
+              <button class="doc-btn" data-doc-type="performanceReport">
+                Performance Report
+              </button>
+              <button class="doc-btn" data-doc-type="payStub">Pay Stub</button>
+              <button class="doc-btn" data-doc-type="shortBiography">
+                Short Biography
+              </button>
+            </div>
+            <div id="documentDisplay">
+              Select a document to view its content.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

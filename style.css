@@ -1,0 +1,215 @@
+/* General Body & Font Styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main Content Container */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead th {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+/* Header Filter Dropdown */
+.header-filter {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #7f8c8d;
+  background-color: #fff;
+  font-size: 14px;
+  width: 100%;
+}
+
+tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #ecf0f1;
+  vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e8f4fd;
+}
+
+/* Details Button Styling */
+.details-btn {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+  background-color: #3498db;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 25px 35px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 750px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.modal-body {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-body p {
+  text-align: left;
+  margin: 10px 0;
+  color: #34495e;
+  font-size: 16px;
+}
+
+.modal-body p strong {
+  color: #2980b9;
+  display: inline-block;
+  width: 150px;
+}
+
+/* Document Viewer Styles */
+.document-viewer {
+  margin-top: 25px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+.doc-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.doc-btn {
+  /* flex: 1; */
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #bdc3c7;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.doc-btn:hover {
+  background-color: #dce4e8;
+}
+.doc-btn.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+#documentDisplay {
+  background-color: #fdfdfd;
+  border: 1px solid #ecf0f1;
+  border-radius: 5px;
+  padding: 15px;
+  min-height: 100px;
+  white-space: pre-wrap; /* Preserves formatting of the document text */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: #555;
+}
